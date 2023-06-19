@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d9ea81d63.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
 
-    <script defer src="./index.css"></script>
+    <header> <!--Header of the page - Lucie-->
+
+        <div class="headerSection">
+
+            <h1>Name of the restaurant</h1>
+            
+            <div class="searchBar">
+                <button class="searchButton">
+                    <i class="fa-solid fa-magnifying-glass" onclick="focusSearchBar()"></i>
+                </button>
+                <input type="text" class="searchInput" placeholder="What do you want to eat? ">
+            </div>
+
+            <div class="cartButton">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </div>
+
+        <hr>
+
+    </header>
+
+
+<script src="index.js"></script>
 </body>
 </html>

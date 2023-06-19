@@ -1,0 +1,64 @@
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*______________________________HEADER____________________________*/
+.headerSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+header i {
+    color: grey
+}
+
+.searchBar {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    color:lightgray;
+}
+
+.searchBar button {
+    background-color: white;
+    border: none;
+}
+
+input {
+    border: none;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 2px;
+    color: grey;
+}
+
+input:focus {
+    background-color: #faf9fc;
+    border: none;
+    outline: none;
+}
+
+.searchBar:focus-within {
+    background-color: #faf9fc;
+    /* change the background color of the parent div */
+}
+
+.cartButton {
+    color: darkgray;
+}
+
+
+hr {
+    width: 90%;
+    color: #faf9fc;
+}
