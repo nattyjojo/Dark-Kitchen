@@ -6,15 +6,12 @@
 }
 
 /*______________________________HEADER____________________________*/
-.wrapper {
-    display:flex;
-    justify-content: left;
-    height: 70px;
-}
-
 header {
     width: 100%;
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*position: fixed;*/
     padding: 0 25px;
     background-color: white;
 }
@@ -85,3 +82,142 @@ hr {
     background-color: #f8f8fa;
     height: 1px;
 }
+
+/*______________________________SHOPPING_CART____________________________*/
+
+.shoppingCart {
+    width: 400px;
+    height: fit-content;
+    max-height: 80vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 0 15px;
+}
+
+.cartHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.cartHeader button {
+    background-color: white;
+    border: none;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemElements {
+    padding: 10px 0
+}
+
+.itemElements h4 {
+    font-size: 12px;
+}
+
+.itemElements img {
+    width: 50px
+}
+
+.itemElements p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.itemQuantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.itemQuantity button {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.itemQuantity button:hover {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.cartFooter {
+    align-self: end;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "numberItems numberItemsValue"
+        "subtotal subtotalValue"
+        "deliveryFees deliveryFeesValue"
+        "total totalValue"
+        "cartCheckout cartCheckout";
+    height: 200px;
+}
+
+.numberItems {
+    grid-area: numberItems;
+    height: 30px;
+}
+
+.numberItemsValue {
+    grid-area: numberItemsValue;
+    height: 30px;
+}
+
+.subtotal {
+    grid-area: subtotal;
+    height: 30px;
+}
+
+.subtotalValue {
+    grid-area: subtotalValue;
+    height: 30px;
+}
+
+.deliveryFees {
+    grid-area: deliveryFees;
+    height: 30px;
+}
+
+.deliveryFeesValue {
+    grid-area: deliveryFeesValue;
+    height: 30px;
+}
+
+.total {
+    grid-area: total;
+    height: 30px;
+}
+
+.totalValue {
+    grid-area: totalValue;
+    height: 30px;
+}
+
+.cartCheckout {
+    grid-area: cartCheckout;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    height: 40px;
+}
+
