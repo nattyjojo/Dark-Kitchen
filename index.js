@@ -1,157 +1,137 @@
-var veganFoodArray = [
-  {
-    name: "Vegan Margherita Pizza",
-    category: "Vegan Pizza",
-    estimatedPrice: 18.00,
-    estimatedOrders: 100,
-    likes: 90,
-    picture: "https://example.com/vegan_pizza.jpg",
-  },
-  {
-    name: "Falafel Wrap",
-    category: "Vegan Sandwich",
-    estimatedPrice: 10.00,
-    estimatedOrders: 120,
-    likes: 110,
-    picture: "https://example.com/falafel_wrap.jpg",
-  },
-  {
-    name: "Tofu Stir Fry",
-    category: "Vegan Asian",
-    estimatedPrice: 15.00,
-    estimatedOrders: 130,
-    likes: 115,
-    picture: "https://example.com/tofu_stir_fry.jpg",
-  },
-  {
-    name: "Vegan Burrito",
-    category: "Vegan Mexican",
-    estimatedPrice: 14.00,
-    estimatedOrders: 150,
-    likes: 120,
-    picture: "https://example.com/vegan_burrito.jpg",
-  },
-  {
-    name: "Vegan Sushi Roll",
-    category: "Vegan Japanese",
-    estimatedPrice: 16.00,
-    estimatedOrders: 110,
-    likes: 100,
-    picture: "https://example.com/vegan_sushi.jpg",
-  },
-  {
-    name: "Vegan Burger",
-    category: "Vegan Fast Food",
-    estimatedPrice: 13.00,
-    estimatedOrders: 160,
-    likes: 140,
-    picture: "https://example.com/vegan_burger.jpg",
-  },
-  {
-    name: "Vegan Pasta Primavera",
-    category: "Vegan Italian",
-    estimatedPrice: 17.00,
-    estimatedOrders: 105,
-    likes: 95,
-    picture: "https://example.com/vegan_pasta.jpg",
-  },
-  {
-    name: "Vegan Paella",
-    category: "Vegan Spanish",
-    estimatedPrice: 20.00,
-    estimatedOrders: 90,
-    likes: 85,
-    picture: "https://example.com/vegan_paella.jpg",
-  },
-  {
-    name: "Vegan Pad Thai",
-    category: "Vegan Thai",
-    estimatedPrice: 14.50,
-    estimatedOrders: 115,
-    likes: 105,
-    picture: "https://example.com/vegan_pad_thai.jpg",
-  },
-  {
-    name: "Vegan Quinoa Salad",
-    category: "Vegan Salads",
-    estimatedPrice: 10.50,
-    estimatedOrders: 120,
-    likes: 110,
-    picture: "https://example.com/vegan_quinoa_salad.jpg",
-  },
-  {
-    name: "Vegan Tofu Scramble",
-    category: "Vegan Breakfast",
-    estimatedPrice: 9.00,
-    estimatedOrders: 130,
-    likes: 120,
-    picture: "https://example.com/vegan_tofu_scramble.jpg",
-  },
-  {
-    name: "Vegan Chocolate Cake",
-    category: "Vegan Desserts",
-    estimatedPrice: 8.00,
-    estimatedOrders: 140,
-    likes: 130,
-    picture: "https://example.com/vegan_chocolate_cake.jpg",
-  },
+let foodList = [
+    {
+        name: "Vegan Pizza",
+        recipe: "Tomato Sauce, Vegan Cheese, Dough",
+        toppings: ["Bell Peppers", "Olives", "Onions"],
+        sauce: ["Tomato", "Pesto"],
+        price: 10,
+        vegan: true,
+        image: "https://example.com/images/vegan-pizza.jpg"
+    },
+    {
+        name: "Burger",
+        recipe: "Beef Patty, Lettuce, Tomato, Bun",
+        toppings: ["Cheese", "Bacon", "Pickles"],
+        sauce: ["Mayo", "Ketchup"],
+        price: 8,
+        vegan: false,
+        image: "https://example.com/images/burger.jpg"
+    },
+    {
+        name: "Caesar Salad",
+        recipe: "Romaine Lettuce, Croutons, Caesar Dressing, Parmesan Cheese",
+        toppings: ["Chicken", "Bacon"],
+        sauce: ["Caesar"],
+        price: 7,
+        vegan: false,
+        image: "https://example.com/images/caesar-salad.jpg"
+    },
+    {
+        name: "Vegan Taco",
+        recipe: "Vegan Meat, Lettuce, Tomato, Taco Shell",
+        toppings: ["Vegan Cheese", "Salsa", "Guacamole"],
+        sauce: ["Salsa"],
+        price: 9,
+        vegan: true,
+        image: "https://example.com/images/vegan-taco.jpg"
+    },
+    {
+        name: "Spaghetti Bolognese",
+        recipe: "Spaghetti, Ground Beef, Tomato Sauce",
+        toppings: ["Parmesan"],
+        sauce: ["Tomato"],
+        price: 12,
+        vegan: false,
+        image: "https://example.com/images/spaghetti-bolognese.jpg"
+    },
+    {
+        name: "Vegan Sushi Roll",
+        recipe: "Rice, Nori, Avocado, Cucumber",
+        toppings: ["Sesame Seeds"],
+        sauce: ["Soy Sauce"],
+        price: 10,
+        vegan: true,
+        image: "https://example.com/images/vegan-sushi-roll.jpg"
+    },
+    {
+        name: "Chicken Teriyaki",
+        recipe: "Chicken, Rice, Teriyaki Sauce",
+        toppings: ["Sesame Seeds", "Green Onion"],
+        sauce: ["Teriyaki"],
+        price: 11,
+        vegan: false,
+        image: "https://example.com/images/chicken-teriyaki.jpg"
+    },
+    {
+        name: "Vegan Quinoa Salad",
+        recipe: "Quinoa, Bell Peppers, Onion, Tomato",
+        toppings: ["Cucumber", "Feta Cheese"],
+        sauce: ["Olive Oil", "Lemon"],
+        price: 8,
+        vegan: true,
+        image: "https://example.com/images/vegan-quinoa-salad.jpg"
+    },
+    {
+        name: "Grilled Steak",
+        recipe: "Beef Steak, Grilled Vegetables",
+        toppings: ["Mushrooms", "Onions"],
+        sauce: ["Steak Sauce"],
+        price: 15,
+        vegan: false,
+        image: "https://example.com/images/grilled-steak.jpg"
+    },
+    {
+        name: "Vegan Stir Fry",
+        recipe: "Tofu, Mixed Vegetables, Soy Sauce",
+        toppings: ["Green Onion", "Sesame Seeds"],
+        sauce: ["Soy Sauce"],
+        price: 10,
+        vegan: true,
+        image: "https://example.com/images/vegan-stir-fry.jpg"
+    },
+    {
+        name: "Shrimp Scampi",
+        recipe: "Shrimp, Garlic, Butter, Linguine",
+        toppings: ["Parsley", "Lemon"],
+        sauce: ["Garlic Butter"],
+        price: 13,
+        vegan: false,
+        image: "https://example.com/images/shrimp-scampi.jpg"
+    },
+    {
+        name: "Vegan Burger",
+        recipe: "Vegan Patty, Lettuce, Tomato, Vegan Bun",
+        toppings: ["Vegan Cheese", "Pickles", "Onion"],
+        sauce: ["Ketchup", "Mustard"],
+        price: 9,
+        vegan: true,
+        image: "https://example.com/images/vegan-burger.jpg"
+    },
+    {
+        name: "Chicken Alfredo",
+        recipe: "Chicken, Fettuccine, Alfredo Sauce",
+        toppings: ["Parmesan"],
+        sauce: ["Alfredo"],
+        price: 11,
+        vegan: false,
+        image: "https://example.com/images/chicken-alfredo.jpg"
+    },
+    {
+        name: "Vegan Smoothie Bowl",
+        recipe: "Banana, Spinach, Almond Milk",
+        toppings: ["Chia Seeds", "Almonds", "Berries"],
+        sauce: ["Honey"],
+        price: 6,
+        vegan: true,
+        image: "https://example.com/images/vegan-smoothie-bowl.jpg"
+    },
+    {
+        name: "Fish and Chips",
+        recipe: "Battered Fish, Chips",
+        toppings: ["Lemon"],
+        sauce: ["Tartare"],
+        price: 10,
+        vegan: false,
+        image: "https://example.com/images/fish-and-chips.jpg"
+    }
 ];
-
-	let sect = document.querySelector('article')
-	sect.classList.add('food-cards');
-
-for (var i =0; i < veganFoodArray.length; i++ ) {
-	let mainFood = document.createElement('div');
-
-	let foodName = document.createElement('h3');
-	let foodImg = document.createElement('img');
-	let foodDis = document.createElement('div');
-	let ulist = document.createElement('ul');
-	let listItems = document.createElement('li');
-	let pricePar = document.createElement('p');
-	let orderPar = document.createElement('p');
-	let Category = document.createElement('p');
-	let order = document.createElement('a');
-	sect.append(mainFood);
-	mainFood.append(foodName, foodImg, foodDis, ulist, pricePar, orderPar, Category);
-	ulist.append(listItems);
-	let foodNamee = veganFoodArray[i].name;
-	let foodDiss = veganFoodArray[i].name;
-	let listItemss = veganFoodArray[i].likes;
-	let priceParr = veganFoodArray[i].estimatedPrice;
-	let orderParr = veganFoodArray[i].name;
-	let Categoryy= veganFoodArray[i].category;
-
-	foodName.insertAdjacentHTML( 'beforeend', foodNamee );
-	pricePar.insertAdjacentHTML( 'beforeend', priceParr );
-	listItems.insertAdjacentHTML( 'beforeend', listItemss );
-	mainFood.classList.add('pepperoni-pizza');
-
-
-
-}
-
-
-
-
-
- // <section class="food-cards">
-            
- //            <div class="pepperoni-pizza">
- //                <h3>Pizza pepperoni</h3>
- //                <img src="images/pepperoni_pizza.jpg" alt="pepperoni pizza">
- //                <div class="description">
- //                    <p>Ingredients</p>
- //                    <ul>
- //                        <li>Lorem ipsum dolor sit amet</li> 
- //                        <li>consectetur adipisicing elit</li>
- //                        <li>Id eius quisquam quidem placeat excepturi velit</li> 
- //                        <li>Tempore, fuga rem voluptate unde</li>
- //                        <li>voluptas ad vitae possimus voluptatibus officiis iste, eveniet culpa modi</li> 
- //                    </ul>
- //                    <p>Price: 18.00&euro; </p>
- //                    <p>Orders: 100</p>
- //                    <p>Category: Pizza</p>
- //                </div>
- //                <a href="#">Order</a>
- //            </div>
