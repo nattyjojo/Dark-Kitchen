@@ -51,7 +51,7 @@ i {
 
 
 header {
-    width: 100%;
+    width: 89vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -264,4 +264,3 @@ h3 {
     margin: 10px;
     height: 40px;
  }
-
