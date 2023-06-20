@@ -78,8 +78,10 @@ const deleteArticle = (event) => {
     if (allCartItems.length > 1) {
         event.target.parentNode.parentNode.nextElementSibling.remove() // removes the hr after the last element so they don't accumulate
         event.target.parentNode.parentNode.remove() // remove the list item.
-    } else {
+    } else { //else: shows the empty message
         divToRemoveItems = event.target.parentNode.parentNode
+        divToRemoveItems.classList.remove("cartItem")
+        divToRemoveItems.classList.add("divToRemoveItems")
         while (divToRemoveItems.firstChild) {
             divToRemoveItems.firstChild.remove()
         } 
@@ -99,8 +101,6 @@ const deleteArticle = (event) => {
         lastItemDiv.appendChild(emptyMessagePara)
     }
     totalPrice()
-
-
 }
 
 //_______________________________Adjust the price
@@ -154,10 +154,16 @@ const adjustPrice = () => {
 
 //_______________________________calculate the total price
 const totalPrice = () => {
+    allCartItems = document.querySelectorAll(".cartItem")
     finaltotal = document.querySelector(".finalTotalValue")
     deliveryFees = document.querySelector(".deliveryFeesText")
-    adjustPrice()
-    finaltotal.innerText = parseInt(subtotalPrice) + parseInt(deliveryFees.innerText)
+    if (allCartItems.length > 0) { // puts 0 as a total if there are no items in the list
+        adjustPrice()
+        finaltotal.innerText = parseInt(subtotalPrice) + parseInt(deliveryFees.innerText)
+    } else {
+        adjustPrice()
+        finaltotal.innerText = "0"
+    }
 }
 
 
