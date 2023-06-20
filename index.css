@@ -294,13 +294,13 @@ main{
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
+    padding: 20px;
 
 }
 
 .nav__header{
     display: flex;
     white-space: nowrap;
-    margin-top: 5px; 
 }
 .nav__header--title{
     font-size: 16px;
@@ -311,14 +311,12 @@ main{
     width: 30px;
     height: 25px;
     margin-left: 10px;
-    margin-top: 11px;
 }
 
 .nav__btn{
     display: flex;
     font-size: 12px;
     justify-content: center;
-    margin-top: 10px;
     color: rgb(152, 149, 149);
 }
 .nav__header--added {
@@ -333,6 +331,7 @@ main{
 .slide{
     margin-top: 50px;
     position: relative;
+    padding: 20px;
 }
 
 .slide__content{
