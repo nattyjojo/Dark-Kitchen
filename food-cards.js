@@ -4,6 +4,12 @@
 //     document.body.classList.toggle('dark-theme');
 //     document.body.classList.toggle('light-theme');
 //     document.getElementById('theme-toggle').classList.toggle('dark');
+//     let shopICon = document.querySelector('.fa-cart-shopping');
+//     let shopDiv = document.querySelector('.shoppingCart');
+
+//     shopICon.onclick = function() {  
+//       shopDiv.style.visibility: = 'visible';
+// };
 
 function displayFoodCards() {
   var foodArray = [
