@@ -167,8 +167,15 @@ const totalPrice = () => {
 }
 
 
+ 
 //_______________________________CREATE A NEW ARTICLE
 const generateNewArticleCart = () => {
+
+    //remove the empty message div if there is any
+    //emptyMessageDiv = document.querySelector(".divToRemoveItems")
+    //if (emptyMessageDiv.length > 0) {
+    //    emptyMessageDiv.remove()
+    //} else {}
 
     //div Cart items
     cartItem = document.createElement("div")
