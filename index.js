@@ -8,8 +8,6 @@ function focusSearchBar() {
 //___________________________________________shoppingCart functions
 
 let cartItemList = document.querySelector(".cartItemList")
-
-
 let listQuantity = []
 let innerTextQuantity = []
 let sumArticles
@@ -75,9 +73,34 @@ const decreaseQuantity = (event) => {
 //remove an article
 let buttonsRemoveArticle = document.querySelectorAll(".removeArticle")
 const deleteArticle = (event) => {
-    event.target.parentNode.parentNode.nextElementSibling.remove()
-    event.target.parentNode.parentNode.remove()
+    allCartItems = document.querySelectorAll(".cartItem")
+
+    if (allCartItems.length > 1) {
+        event.target.parentNode.parentNode.nextElementSibling.remove() // removes the hr after the last element so they don't accumulate
+        event.target.parentNode.parentNode.remove() // remove the list item.
+    } else {
+        divToRemoveItems = event.target.parentNode.parentNode
+        while (divToRemoveItems.firstChild) {
+            divToRemoveItems.firstChild.remove()
+        } 
+        //create a "your shopping cart is empty" message
+        emptyMessageText = document.createTextNode("Your shopping cart is empty")
+        emptyMessagePara = document.createElement("p")
+        emptyMessagePara.appendChild(emptyMessageText)
+
+        //Style the message
+        emptyMessagePara.style.height = ("70px")
+        emptyMessagePara.style.fontSize = ("14px")
+        emptyMessagePara.style.margin = ("auto")
+        emptyMessagePara.style.paddingTop = ("20px")
+
+        //select the last cart item (to add the empty message instead)
+        lastItemDiv = allCartItems[allCartItems.length-1]
+        lastItemDiv.appendChild(emptyMessagePara)
+    }
     totalPrice()
+
+
 }
 
 //_______________________________Adjust the price
@@ -138,7 +161,7 @@ const totalPrice = () => {
 }
 
 
-//CREATE A NEW ARTICLE
+//_______________________________CREATE A NEW ARTICLE
 const generateNewArticleCart = () => {
 
     //div Cart items
@@ -258,5 +281,5 @@ const addNewItemCart = () => {
 }
 
 addNewItemCart()
-addNewItemCart()
+
 
