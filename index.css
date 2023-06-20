@@ -6,10 +6,11 @@ body {
 }
 .nav-bar {
 	 background-color: black;
-    height: 100vh;
+    height: inherit;
+    /* position: fixed; */
     display: flex;
     flex-direction: column;
-    width: 130px;
+    width: 95px;
     color: white;
     margin-top: 0px;
     justify-content: space-between;
@@ -131,15 +132,21 @@ hr {
 /*______________________________SHOPPING_CART____________________________*/
 
 .shoppingCart {
-    width: 400px;
-    height: fit-content;
-    max-height: 80vh;
+    width: 380px;
+    /* height: fit-content; */
+    /* max-height: 80vh; */
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 5px;
     padding: 0 15px;
+    background-color: gray;
+    margin-top: 426px;
+    /* overflow: hidden; */
+    position: fixed;
+    right: 0;
+    visibility: hidden;
 }
 
 .cartHeader {

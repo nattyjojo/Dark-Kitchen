@@ -45,8 +45,7 @@
                 
                 <div class="headerElements">
                     <div class="searchBar">
-                                    <button id="theme-toggle" class="toggle-btn">Light</button>
-
+                                
                         <button class="searchButton">
                             <i class="fa-solid fa-magnifying-glass" onclick="focusSearchBar()"></i>
                         </button>
@@ -58,11 +57,66 @@
                     <div class="cartButton">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
+                    <section class="shoppingCart"> <!--Shopping cart - Lucie-->
+    <div class="cartUpperPart">
+        <div class="cartHeader">
+            <h3>Your basket</h3>
+            <button class="cartClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cartItemList">
+            <div class="cartItem">
+            
+                <img src="" alt="" class="itemImage">
+            
+                <div class="itemElements">
+                    <h4 class="itemName">Item name</h4>
+                    <p class="itemInformation">Item information</p>
+                    <p class="itemPrice">$ 15</p>
+                </div>
+            
+                <div class="itemQuantity">
+                    <button class="minusQuantity">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <p class="currentQuantity">1</p>
+                    <button class="addQuantity">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="removeItem">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div> 
+            <hr>
+        </div>
+        <hr>
+        
+
+    </div>
+
+    <div class="cartFooter"> <!--use a grid-->
+            <p class="numberItems">Number of items</p>
+            <p class="numberItemsValue"></p>
+            <p class="subtotal">Subtotal</p>
+            <p class="subtotalValue"><span class="subtotalValueText"></span> €</p>
+            <p class="deliveryFees">Delivery Fees</p>
+            <p class="deliveryFeesValue"><span class="deliveryFeesText">5</span> €</p>
+            <p class="total">Total</p>
+            <p class="totalValue"><span class="finalTotalValue"></span> €</p>
+
+        <button class="cartCheckout">Checkout</button>
+
+    </div>
+
+</section>
+
                     </div>
                 </div>
                 <hr>
         </header>
-    </section>
     <section class="slide">
         <figure class="slide__content all">
             <img class="icons" src="./slidIcon/plate.jpg" alt="all">
@@ -108,79 +162,23 @@
             <img class="icons" src="./slidIcon/meat.png" alt="meat icon">
             <figcaption class="slide__content--title">Meat</figcaption>
         </figure>
-        <i class="slide__content btnRight fa-solid fa-angle-right"></i>
+        <i class="slide__content btnRight fa-solid fa-angle-right">
     </section>
 </main>
-</section> 
     <section class="food-cards" id = "food-container">
 
     </section>
 
-             <article>
               
-            </article>
 
-            </div>
+    
+             <section class="food-cards" id = "food-container">
+
         </section>
 
-    <script defer src="./index.js"></script>
+</div>
+<script defer src="./index.js"></script>
     
-<section class="shoppingCart"> 
-    <div class="cartUpperPart">
-        <div class="cartHeader">
-            <h3>Your basket</h3>
-            <button class="cartClose">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-
-        <div class="cartItemList">
-
-            <div class="cartItem">
-            
-                <img src="" alt="" class="itemImage">
-            
-                <div class="itemElements">
-                    <h4 class="itemName">Item name</h4>
-                    <p class="itemInformation">Item information</p>
-                    <p class="itemPrice">$ 15</p>
-                </div>
-            
-                <div class="itemQuantity">
-                    <button class="minusQuantity">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <p class="currentQuantity">1</p>
-                    <button class="addQuantity">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                    <button class="removeItem">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </button>
-                </div>
-            </div>
-             <hr>
-        </div>
-        <hr>
-        
-
-    </div>
-
-        <div class="cartFooter">
-            <p class="numberItems">Number of items</p>
-            <p class="numberItemsValue"></p>
-            <p class="subtotal">Subtotal</p>
-            <p class="subtotalValue">15€</p>
-            <p class="deliveryFees">Delivery Fees</p>
-            <p class="deliveryFeesValue">5€</p>
-            <p class="total">Total</p>
-            <p class="totalValue">20€</p>
-
-        <button class="cartCheckout">Checkout</button>
-
-    </div>
-
-</section>
 <script src="index.js"></script>
 <script src="food-cards.js"></script>
 </body>
