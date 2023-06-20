@@ -75,6 +75,7 @@ const decreaseQuantity = (event) => {
 //remove an article
 let buttonsRemoveArticle = document.querySelectorAll(".removeArticle")
 const deleteArticle = (event) => {
+    event.target.parentNode.parentNode.nextElementSibling.remove()
     event.target.parentNode.parentNode.remove()
     totalPrice()
 }
