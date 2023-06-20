@@ -137,7 +137,7 @@ function displayFoodCards() {
     description.appendChild(sauces);
 
     var orderLink = document.createElement('a');
-
+    orderLink.classList.add('ordernow')
     orderLink.href = foodItem.orderLink;
     orderLink.textContent = 'Order Now - ' + foodItem.price;
     foodCard.appendChild(category);
