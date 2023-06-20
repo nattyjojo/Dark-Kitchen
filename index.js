@@ -135,6 +135,22 @@ let foodList = [
         image: "https://example.com/images/fish-and-chips.jpg"
     }
 ];
+    let shopICon = document.querySelector('.fa-cart-shopping');
+    let shopDiv = document.querySelector('.shoppingCart');
+
+    let exitbutton = document.querySelector('.fa-xmark');
+
+shopICon.addEventListener("click", myFunction);
+function myFunction() {
+shopDiv.setAttribute("style", "visibility:visible;");
+
+}
+
+exitbutton.addEventListener("click", closeShop);
+function closeShop() {
+shopDiv.setAttribute("style", "visibility:hidden;");
+
+}
 //header functions
 function focusSearchBar() {
     document.querySelector(".searchInput").focus();
