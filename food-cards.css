@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add styles for dark and light themes */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+body.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 90px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #ccc;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.dark {
+    background-color: #555;
+}
+
+.toggle-btn.dark::before {
+    transform: translateX(25px);
+}
+
+
+.food-cards {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    background: #fff;
+    padding: 30px;
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 20px;
+    width: 350px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 3);
+    height: 600px;
+}
+
+.category {
+    padding: 5px 5px;
+    background: gray;
+    color: black;
+    width: 70px;
+    text-align: center;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.type {
+    padding: 5px 5px;
+    background: gray;
+    color: black;
+    width: 70px;
+    text-align: center;
+    margin-top: -30px;
+    margin-left: 220px;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.food h3 {
+    text-align: center;
+    color: gray;
+    margin: 5px;
+    margin-top: 5px;
+}
+
+.food img{
+    margin-top: 5px;
+    margin-left: 21px;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.food ul{
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.description{
+    margin-top: 0px;
+    font-size: large;
+}
+
+.toppings{
+    margin-top: 10px;
+}
+.sauce {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 70px;
+    margin-right: 5px;
+}
+
+select {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    font-size:large;
+    flex: 1;
+  }
+.ordernow{
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: large;
+    display: inline-block;
+    padding: 10px;
+    width: 200px;
+    border-radius: 15px;
+    color: white;
+    background: #4caf50;
+    margin-top: auto;
+    margin-bottom: 5px;
+    margin-left: 45px;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+
+.ordernow:hover {
+    background: darkgreen;
+}
+

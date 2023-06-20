@@ -1,0 +1,374 @@
+body {
+	margin: 0px;
+}
+.container {
+	display: flex;
+}
+.nav-bar {
+	 background-color: black;
+    height: inherit;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    width: 95px;
+    color: white;
+    margin-top: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+	 color: inherit; 
+}
+.nav-icons{
+	flex-basis: 70%;
+	display: flex;
+	flex-direction: column;
+
+}
+.nav-icons li {
+	padding-bottom: 55px;
+}
+li {
+	text-decoration: none;
+	list-style-type: none;  
+}
+i {
+	font-size: 25px;
+	
+}
+.nav-icons ul {
+	padding: 0;
+}
+.logo{
+	padding-top: 30px;
+
+}
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+};
+
+
+header {
+    width: 89vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*position: fixed;*/
+    padding: 0 25px;
+    background-color: white;
+}
+
+.headerSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+header i {
+    color: grey
+}
+
+.headerElements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchBar {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    width: 250px;
+    color:lightgray;
+    margin-left: 300px;
+}
+
+.searchBar button {
+    background-color: white;
+    border: none;
+}
+
+input {
+    border: none;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 2px;
+    color: grey;
+}
+
+input:focus {
+    background-color: #faf9fc;
+    border: none;
+    outline: none;
+}
+
+.searchBar:focus-within {
+    background-color: #faf9fc;
+    /* change the background color of the parent div */
+}
+
+.cartButton {
+    color: darkgray;
+}
+
+
+hr {
+    width: 100%;
+    border: none;
+    background-color: #f8f8fa;
+    height: 1px;
+}
+
+/*______________________________SHOPPING_CART____________________________*/
+
+.shoppingCart {
+    width: 380px;
+    /* height: fit-content; */
+    /* max-height: 80vh; */
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 0 15px;
+    background-color: gray;
+    margin-top: 426px;
+    /* overflow: hidden; */
+    position: fixed;
+    right: 0;
+    visibility: hidden;
+}
+
+.cartHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.cartHeader button {
+    background-color: white;
+    border: none;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemElements {
+    padding: 10px 0
+}
+
+.itemElements h4 {
+    font-size: 12px;
+}
+
+.itemElements img {
+    width: 50px
+}
+
+.itemElements p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.itemQuantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.itemQuantity button {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.itemQuantity button:hover {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.cartFooter {
+    align-self: end;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "numberItems numberItemsValue"
+        "subtotal subtotalValue"
+        "deliveryFees deliveryFeesValue"
+        "total totalValue"
+        "cartCheckout cartCheckout";
+    height: 200px;
+}
+
+.numberItems {
+    grid-area: numberItems;
+    height: 30px;
+}
+
+.numberItemsValue {
+    grid-area: numberItemsValue;
+    height: 30px;
+}
+
+.subtotal {
+    grid-area: subtotal;
+    height: 30px;
+}
+
+.subtotalValue {
+    grid-area: subtotalValue;
+    height: 30px;
+}
+
+.deliveryFees {
+    grid-area: deliveryFees;
+    height: 30px;
+}
+
+.deliveryFeesValue {
+    grid-area: deliveryFeesValue;
+    height: 30px;
+}
+
+.total {
+    grid-area: total;
+    height: 30px;
+}
+
+.totalValue {
+    grid-area: totalValue;
+    height: 30px;
+}
+
+.cartCheckout {
+    grid-area: cartCheckout;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    height: 40px;
+ }
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100vw;
+  
+}
+main{
+    padding: 20px;
+    margin: 10px;
+}
+
+/* section */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+
+}
+
+.nav__header{
+    display: flex;
+    white-space: nowrap;
+    margin-top: 5px; 
+}
+.nav__header--title{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(57, 57, 57);
+}
+.findIcon{
+    width: 30px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 11px;
+}
+
+.nav__btn{
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    margin-top: 10px;
+    color: rgb(152, 149, 149);
+}
+.nav__header--added {
+    margin-right: 20px;
+}
+.btnDown{
+    margin-left: 5px;
+}
+
+/* slide section */
+
+.slide{
+    margin-top: 50px;
+    position: relative;
+}
+
+.slide__content{
+    display: inline-block;
+    max-width: 65%;
+    height: 100px;
+    margin: 0;
+    margin-right: 4.4%;
+}
+.slide__content :hover{
+    opacity: 2%;
+}
+.icons{
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgb(223, 218, 218);
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+.slide__content--title{
+    text-align: center;
+    
+}
+.btnRight{
+    margin-right: 0;
+    top: 30px;
+    color: rgb(152, 149, 149);
+    position: absolute;
+    top: 40px;
+}
+
+
+.all{
+    display: inline-block;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: rgb(253, 222, 44);
+}

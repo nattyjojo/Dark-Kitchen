@@ -1,10 +1,187 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://kit.fontawesome.com/0feefb6da9.js" crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="food-cards.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d9ea81d63.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body> 
+<body>
+    <section class="container">
+    </div>
+    <nav class="nav-bar">
+        <div class="logo">
+          <i class="fa-solid fa-bowl-rice"></i>
+        </div>
+        <div class="nav-icons">
+        <ul>
+            <li><a href=""><i class="fa-solid fa-house"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-pizza-slice"></i></a></li>
+            <li><a href=""><i class="fa-regular fa-user"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-compass"></i></a></li>
+            <li><a href=""><i class="fa-sharp fa-solid fa-shop"></i></a></li>
+        </ul>
+    </div>
+              <i class="fa-solid fa-arrow-right-to-bracket" style="
+    padding-bottom: 36px;
+"></i>
+    </nav>
+
+    <div class="wrapper">
+        <header> 
+            <div class="headerSection">
+
+                <h1>Food</h1>
+                
+                <div class="headerElements">
+                    <div class="searchBar">
+                                
+                        <button class="searchButton">
+                            <i class="fa-solid fa-magnifying-glass" onclick="focusSearchBar()"></i>
+                        </button>
+                        <input type="text" class="searchInput" placeholder="What do you want to eat? ">
+                
+                    </div>
+
+
+                    <div class="cartButton">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <section class="shoppingCart"> <!--Shopping cart - Lucie-->
+    <div class="cartUpperPart">
+        <div class="cartHeader">
+            <h3>Your basket</h3>
+            <button class="cartClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cartItemList">
+            <div class="cartItem">
+            
+                <img src="" alt="" class="itemImage">
+            
+                <div class="itemElements">
+                    <h4 class="itemName">Item name</h4>
+                    <p class="itemInformation">Item information</p>
+                    <p class="itemPrice">$ 15</p>
+                </div>
+            
+                <div class="itemQuantity">
+                    <button class="minusQuantity">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <p class="currentQuantity">1</p>
+                    <button class="addQuantity">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="removeItem">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div> 
+            <hr>
+        </div>
+        <hr>
+        
+
+    </div>
+
+    <div class="cartFooter"> <!--use a grid-->
+            <p class="numberItems">Number of items</p>
+            <p class="numberItemsValue"></p>
+            <p class="subtotal">Subtotal</p>
+            <p class="subtotalValue"><span class="subtotalValueText"></span> €</p>
+            <p class="deliveryFees">Delivery Fees</p>
+            <p class="deliveryFeesValue"><span class="deliveryFeesText">5</span> €</p>
+            <p class="total">Total</p>
+            <p class="totalValue"><span class="finalTotalValue"></span> €</p>
+
+        <button class="cartCheckout">Checkout</button>
+
+    </div>
+
+</section>
+
+                    </div>
+                </div>
+                <hr>
+        </header>
+    <section class="slide">
+        <figure class="slide__content all">
+            <img class="icons" src="./slidIcons/plate.jpg" alt="all">
+            <figcaption class="slide__content--title">All</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/pizzaIcon.png" alt="pizza icon">
+            <figcaption class="slide__content--title">Pizza</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/shushiIcon.png" alt="sushi icon">
+            <figcaption class="slide__content--title">Sushi</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/drinksIcon.png" alt="drinks icon">
+            <figcaption class="slide__content--title">Drinks</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/cakeIcon.png" alt="cake icon">
+            <figcaption class="slide__content--title">Cake</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/sushiIcon2.png" alt="another sushi icon">
+            <figcaption class="slide__content--title">Sushi</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/breadIcon.png" alt="bread icon">
+            <figcaption class="slide__content--title">Bread</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/yogurt.png" alt="Yogurt icon">
+            <figcaption class="slide__content--title">Yogurt</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/burgerIcon.png" alt="Burger icon">
+            <figcaption class="slide__content--title">Burger</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/bowelIcon.png" alt="Bowl icon">
+            <figcaption class="slide__content--title">Bowl</figcaption>
+        </figure>
+        <figure class="slide__content">
+            <img class="icons" src="./slidIcons/meatIcon.png" alt="meat icon">
+            <figcaption class="slide__content--title">Meat</figcaption>
+        </figure>
+        <i class="slide__content btnRight fa-solid fa-angle-right"></i>
+</section>    
+    
+
+    <section class="food-cards" id = "food-container">
+
+    </section>
+
+              
+
+    
+             <section class="food-cards" id = "food-container">
+
+        </section>
+
+</div>
+<script defer src="./index.js"></script>
+    
+<script src="index.js"></script>
+<script src="food-cards.js"></script>
 </body>
 </html>
