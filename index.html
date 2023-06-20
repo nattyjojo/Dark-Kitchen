@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="https://kit.fontawesome.com/0feefb6da9.js" crossorigin="anonymous"></script>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d9ea81d63.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -28,6 +35,7 @@
 "></i>
     </nav>
 
+
     <div class="wrapper">
         <header> <!--Header of the page - Lucie-->
 
@@ -39,6 +47,13 @@
                 <div class="headerElements">
                        <button><i id="night" class="fa-solid fa-moon"></i></button>
 
+        <header> <!--Header of the page - Lucie-->
+
+            <div class="headerSection">
+
+                <h1>Food</h1>
+                
+                <div class="headerElements">
                     <div class="searchBar">
                         <button class="searchButton">
                             <i class="fa-solid fa-magnifying-glass" onclick="focusSearchBar()"></i>
@@ -51,6 +66,14 @@
                     <div class="cartButton">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
+                    </div>
+
+                    <div class="cartButton">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                
+
+
                 </div>
 
             </div>
@@ -72,5 +95,67 @@
 
 </section>
     <script defer src="./index.js"></script>
+
+        </header>
+
+    
+<section class="shoppingCart"> <!--Shopping cart - Lucie-->
+    <div class="cartUpperPart">
+        <div class="cartHeader">
+            <h3>Your basket</h3>
+            <button class="cartClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cartItemList">
+           <!-- 
+            <div class="cartItem">
+            
+                <img src="" alt="" class="itemImage">
+            
+                <div class="itemElements">
+                    <h4 class="itemName">Item name</h4>
+                    <p class="itemInformation">Item information</p>
+                    <p class="itemPrice">$ 15</p>
+                </div>
+            
+                <div class="itemQuantity">
+                    <button class="minusQuantity">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <p class="currentQuantity">1</p>
+                    <button class="addQuantity">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="removeItem">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>-->
+            <hr>
+        </div>
+        <hr>
+        
+
+    </div>
+
+    <div class="cartFooter"> <!--use a grid-->
+            <p class="numberItems">Number of items</p>
+            <p class="numberItemsValue"></p>
+            <p class="subtotal">Subtotal</p>
+            <p class="subtotalValue">15€</p>
+            <p class="deliveryFees">Delivery Fees</p>
+            <p class="deliveryFeesValue">5€</p>
+            <p class="total">Total</p>
+            <p class="totalValue">20€</p>
+
+        <button class="cartCheckout">Checkout</button>
+
+    </div>
+
+</section>
+<script src="index.js"></script>
+>>>>>>> origin/team
 </body>
 </html>
