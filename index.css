@@ -133,14 +133,19 @@ hr {
 
 .shoppingCart {
     width: 400px;
-    height: fit-content;
-    max-height: 80vh;
+    /* height: fit-content; */
+    /* max-height: 80vh; */
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 5px;
     padding: 0 15px;
+    background-color: gray;
+    margin-top: 426px;
+    /* overflow: hidden; */
+    position: fixed;
+    right: 0;
 }
 
 .cartHeader {
