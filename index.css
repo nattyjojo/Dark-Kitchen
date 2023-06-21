@@ -5,146 +5,153 @@ body {
 	display: flex;
 }
 .nav-bar {
-    background-color: black;
-    height: 100vh;
-    display: flex;
-   flex-direction: column;
-   width: 130px;
-   color: white;
-   margin-top: 0px;
-   justify-content: space-between;
-   align-items: center;
-}
-a {
-    color: inherit; 
-}
-.nav-icons{
-    flex-basis: 70%;
+	 background-color: black;
+    height: inherit;
+    /* position: fixed; */
     display: flex;
     flex-direction: column;
- 
+    width: 95px;
+    color: white;
+    margin-top: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+	 color: inherit; 
+}
+.nav-icons{
+	flex-basis: 70%;
+	display: flex;
+	flex-direction: column;
+
 }
 .nav-icons li {
-    margin-bottom: 55px;
-}  
-
+	padding-bottom: 55px;
+}
 li {
-    text-decoration: none;
-    list-style-type: none;  
- }
- i {
-    font-size: 25px;
-    
- }
- .nav-icons ul {
-    padding: 0;
- } 
+	text-decoration: none;
+	list-style-type: none;  
+}
+i {
+	font-size: 25px;
+	
+}
+.nav-icons ul {
+	padding: 0;
+}
+.logo{
+	padding-top: 30px;
 
-
- .logo{
-    padding-top: 30px;
- 
- }
- * {
+}
+* {
     padding : 0;
     margin : 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
- }; 
+};
 
- header {
+
+header {
     width: 89vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* position: fixed; */
+    /*position: fixed;*/
     padding: 0 25px;
     background-color: white;
- }
+}
 
- .headerSection {
+.headerSection {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 70px;
- }
+}
 
- h1 {
-    font-size: 15px;
-    text-align: center;
-    margin-left: 15px;
- }
- 
- header i {
-    color: grey;
- }
+h1 {
+    font-size: 16px;
+}
 
- .headerElements {
+header i {
+    color: grey
+}
+
+.headerElements {
     display: flex;
     flex-direction: row;
     align-items: center;
- }  
+}
 
- .searchBar {
+.searchBar {
+       display: flex;
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 5px;
     width: 250px;
-    color:lightgray;
-    margin-right: 20px;
- }
+    height: 61px;
+    color: lightgray;
+    margin-left: 300px;
+    margin-right: 30px;
+}
 
- .searchBar button {
+.searchBar button {
     background-color: white;
     border: none;
- }
- input {
+}
+
+input {
     border: none;
     font-size: 12px;
     font-weight: 300;
     padding: 2px;
     color: grey;
- }
+}
 
- input:focus {
+input:focus {
     background-color: #faf9fc;
     border: none;
     outline: none;
- }
- 
- .searchBar:focus-within {
+}
+
+.searchBar:focus-within {
     background-color: #faf9fc;
- }
- 
- .cartButton {
+    /* change the background color of the parent div */
+}
+
+.cartButton {
     color: darkgray;
-    margin-right: 300px;
- }
- 
- .darkmode i{
-    margin-right: 50px;
- }
- hr {
+    margin-right: 150px;
+}
+
+
+hr {
     width: 100%;
     border: none;
     background-color: #f8f8fa;
     height: 1px;
- }   
-  
+}
+
 /*______________________________SHOPPING_CART____________________________*/
 
 .shoppingCart {
-    width: 400px;
-    height: fit-content;
-    max-height: 80vh;
+    width: 380px;
+    /* height: fit-content; */
+    /* max-height: 80vh; */
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 5px;
     padding: 0 15px;
+    background-color: gray;
+    margin-top: 426px;
+    /* overflow: hidden; */
+    position: fixed;
+    right: 0;
+    z-index:10000000;
+    visibility: hidden;
 }
 
 .cartHeader {
@@ -171,7 +178,7 @@ h3 {
 }
 
 .itemElements {
-    padding: 10px 0;
+    padding: 10px 0
 }
 
 .itemElements h4 {
@@ -179,7 +186,7 @@ h3 {
 }
 
 .itemElements img {
-    width: 50px;
+    width: 50px
 }
 
 .itemElements p {
@@ -370,6 +377,3 @@ main{
     padding: 5px;
     background-color: rgb(253, 222, 44);
 }
-
-
-  

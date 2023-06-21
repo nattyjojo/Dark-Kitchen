@@ -15,9 +15,9 @@ cursor: pointer;
 } */
 
 body.dark .nav-icons i{
-    /* color: fff; */
-    /* background-color: black; */
-    /* border: none; */
+    color: fff;
+    background-color: black;    
+    border: none;
 }
 
 body.dark hr{

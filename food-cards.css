@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
-    border: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 .food-cards {
-    margin-top: -590px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -49,7 +48,7 @@
     color: black;
     width: 100px;
     text-align: center;
-    margin-top: -40px;
+    margin-top: -30px;
     margin-left: 220px;
     border-radius: 20px;
     font-size: medium;
@@ -62,7 +61,6 @@
     color: gray;
     margin: 5px;
     margin-top: 5px;
-    font-size: large;
 }
 
 .food img{
@@ -84,11 +82,9 @@
     font-size: large;
 }
 
-.toppings {
+.toppings{
     margin-top: 10px;
-    display: block;
 }
-
 .sauce {
     display: flex;
     align-items: center;
@@ -106,7 +102,6 @@
     width: 70px;
     margin-right: 5px;
 }
-
 select {
     margin-top: 5px;
     padding: 8px;
@@ -137,4 +132,3 @@ select {
 .ordernow:hover {
     background: darkgreen;
 }
-
