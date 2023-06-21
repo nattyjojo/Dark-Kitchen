@@ -347,14 +347,15 @@ main{
 
 .slide{
      margin-top: 50px;
-    position: relative;
-    width: 129%;
-    padding: 13px 30px;
-    padding: 0px 20px;
-    margin: 50px 20px;
+    /* position: relative; */
+    width: 98%;
+    padding: 13px 0px 0 30px;
+    /* padding: 0px 20px; */
+    margin: 38px 0 0 33px;
 }
 
 .slide__content{
+	margin-right: 30px;
     display: inline-block;
     max-width: 70%;
     height: 100px;
