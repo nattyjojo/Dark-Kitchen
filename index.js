@@ -254,6 +254,73 @@ const deleteArticle = (event) => {
         lastItemDiv.appendChild(emptyMessagePara)
     }
     totalPrice()
+
+}
+
+//_______________________________Adjust the price
+
+let allPrices
+let subtotalPrice
+
+
+const getArrayOfElements = () => {
+    resetQuantityValues()
+    resetPriceValues()
+    priceCalculationObject = []
+
+    for (i=0 ; i < innerTextQuantity.length ; i++) {
+        let itemPrice = {}
+        itemPrice.quantity = innerTextQuantity[i]
+        itemPrice.price = innerTextPrice[i]
+        priceCalculationObject.push(itemPrice)
+    }
+    return priceCalculationObject
+}
+
+//calculate the price
+
+let subTotalAllItems = []
+const getArraysofAllSubtotalPrices = () => {
+    getArrayOfElements()
+    subTotalAllItems = [] // it doesn't work here
+    for (i=0 ; i<priceCalculationObject.length; i++) {
+        let subTotalPriceOfThisItem = 0
+        subTotalPriceOfThisItem = priceCalculationObject[i].quantity * priceCalculationObject[i].price
+        subTotalAllItems.push(subTotalPriceOfThisItem)
+    } 
+    return subTotalAllItems
+}
+
+const calculatePrice = () => {
+    getArraysofAllSubtotalPrices()
+    subtotalPrice = 0
+    for (i=0 ; i < subTotalAllItems.length ; i++) {
+        subtotalPrice = subtotalPrice + subTotalAllItems[i]
+    }
+    return subtotalPrice
+}
+
+const adjustPrice = () => {
+    subtotal = document.querySelector(".subtotalValueText")
+    calculatePrice()
+    subtotal.innerText = subtotalPrice
+}
+
+//_______________________________calculate the total price
+const totalPrice = () => {
+    allCartItems = document.querySelectorAll(".cartItem")
+    finaltotal = document.querySelector(".finalTotalValue")
+    deliveryFees = document.querySelector(".deliveryFeesText")
+    if (allCartItems.length > 0) { // puts 0 as a total if there are no items in the list
+        adjustPrice()
+        finaltotal.innerText = parseInt(subtotalPrice) + parseInt(deliveryFees.innerText)
+    } else {
+        adjustPrice()
+        finaltotal.innerText = "0"
+    }
+}
+
+
 }
 
 //_______________________________Adjust the price
@@ -458,10 +525,6 @@ addNewItemCart()
 numberItemsValue = document.querySelector(".numberItemsValue") //I put the assignation here so it's reset each time we use the function
 
 
-
-
-
 //delete the item function: if it goes lower than 0, we should remove it
 //also mayby add a remove icon
-
 
