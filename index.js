@@ -463,3 +463,5 @@ numberItemsValue = document.querySelector(".numberItemsValue") //I put the assig
 
 //delete the item function: if it goes lower than 0, we should remove it
 //also mayby add a remove icon
+
+

@@ -11,7 +11,6 @@
 //       shopDiv.style.visibility: = 'visible';
 // };
 
-function displayFoodCards() {
   var foodArray = [
     {
       category: 'Pizza',
@@ -91,32 +90,33 @@ function displayFoodCards() {
     category.classList.add('category');
     category.textContent = foodItem.category;
 
-    var type = document.createElement('p');
+    let type = document.createElement('p');
     type.classList.add('type');
     type.textContent = foodItem.type;
 
-    var name = document.createElement('h3');
+    let name = document.createElement('h3');
     name.textContent = foodItem.name;
+    name.classList.add('foodTitle')
 
-    var image = document.createElement('img');
+    let image = document.createElement('img');
     image.src = foodItem.image;
     image.alt = foodItem.name;
 
-    var description = document.createElement('div');
+    let description = document.createElement('div');
     description.classList.add('description');
-    var ul = document.createElement('ul');
+    let ul = document.createElement('ul');
     for (var j = 0; j < foodItem.description.length; j++) {
-      var li = document.createElement('li');
+      let li = document.createElement('li');
       li.textContent = foodItem.description[j];
       ul.appendChild(li);
     }
     description.appendChild(ul);
 
-    var toppings = document.createElement('div');
+    let toppings = document.createElement('div');
     toppings.classList.add('toppings');
-    var toppingsLabel = document.createElement('label');
+    let toppingsLabel = document.createElement('label');
     toppingsLabel.textContent = 'Toppings:';
-    var toppingsSelect = document.createElement('select');
+    let toppingsSelect = document.createElement('select');
     for (var k = 0; k < foodItem.toppings.length; k++) {
       var option = document.createElement('option');
       option.textContent = foodItem.toppings[k];
@@ -156,6 +156,25 @@ function displayFoodCards() {
     var foodContainer = document.getElementById('food-container');
     foodContainer.appendChild(foodCard);
   }
+let searchInput = document.querySelector(".searchInput");
+let foodSearcha = document.querySelectorAll(".foodTitle");
+let fooding = document.querySelectorAll(".foodTitle");
+
+
+
+
+
+searchInput.addEventListener("input", searching);
+
+function searching (e) {
+
+  for (var i =0;i< foodArray.length;i++) {
+    if (e.target.value === foodArray[i].name) {
+    foodSearcha[i].style.color = 'green';
+      console.log('yes')
+    }
+  }
 }
 
-displayFoodCards();
+
+
