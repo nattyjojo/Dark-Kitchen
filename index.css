@@ -85,12 +85,15 @@ header i {
 }
 
 .searchBar {
+       display: flex;
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 5px;
     width: 250px;
-    color:lightgray;
+    height: 61px;
+    color: lightgray;
     margin-left: 300px;
+    margin-right: 30px;
 }
 
 .searchBar button {
@@ -146,6 +149,7 @@ hr {
     /* overflow: hidden; */
     position: fixed;
     right: 0;
+    z-index:10000000;
     visibility: hidden;
     z-index: 1000000;
 }
@@ -295,13 +299,13 @@ main{
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
+    padding: 20px;
 
 }
 
 .nav__header{
     display: flex;
     white-space: nowrap;
-    margin-top: 5px; 
 }
 .nav__header--title{
     font-size: 16px;
@@ -312,14 +316,12 @@ main{
     width: 30px;
     height: 25px;
     margin-left: 10px;
-    margin-top: 11px;
 }
 
 .nav__btn{
     display: flex;
     font-size: 12px;
     justify-content: center;
-    margin-top: 10px;
     color: rgb(152, 149, 149);
 }
 .nav__header--added {
@@ -334,6 +336,7 @@ main{
 .slide{
     margin-top: 50px;
     position: relative;
+    padding: 20px;
 }
 
 .slide__content{

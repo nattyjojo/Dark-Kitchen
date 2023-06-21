@@ -538,10 +538,3 @@ buttonOrderNowList = document.querySelectorAll(".ordernow")
 buttonOrderNowList.forEach(element => {
     addEventListener("click", )
 });
-
-
-
-
-
-//the last element of the array (the newest added to the list) is :
-//nodesFoodItemsSelected[nodesFoodItemsSelected.length-1]
