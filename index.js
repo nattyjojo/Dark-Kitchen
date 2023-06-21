@@ -431,7 +431,7 @@ const generateNewArticleCart = () => {
     //p item information
     itemInformation = document.createElement("p")
     itemInformation.classList.add("itemInformation")
-    itemInformationText = document.createTextNode(`${nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].information[1].innerHTML}`)
+    //itemInformationText = document.createTextNode(`${nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].information[1].innerHTML}`)
     //This gives me the topping div : ;
 
     //p item price 
@@ -500,7 +500,7 @@ const generateNewArticleCart = () => {
 
         //Item elements
         itemName.appendChild(itemNameText)
-        itemInformation.appendChild(itemInformationText)
+        //itemInformation.appendChild(itemInformationText)
         itemPriceCurrency.appendChild(itemPriceCurrencyText)
         itemPriceValue.appendChild(itemPriceValueText)
         itemPrice.appendChild(itemPriceValue)
