@@ -1,140 +1,211 @@
-let foodList = [
+ // document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+// function toggleTheme() {
+//     document.body.classList.toggle('dark-theme');
+//     document.body.classList.toggle('light-theme');
+//     document.getElementById('theme-toggle').classList.toggle('dark');
+
+
+//_____________________________________________________________________FOODCARDS________________________________________________________
+function displayFoodCards() {
+  var foodArray = [
     {
-        name: "Vegan Pizza",
-        recipe: "Tomato Sauce, Vegan Cheese, Dough",
-        toppings: ["Bell Peppers", "Olives", "Onions"],
-        sauce: ["Tomato", "Pesto"],
-        price: 10,
-        vegan: true,
-        image: "https://example.com/images/vegan-pizza.jpg"
+      category: 'Pizza',
+      type: 'comfort',
+      name: 'Pizza pepperoni',
+      image: 'images/pepperoni_pizza.jpg',
+      description: ['Pizza Crust', 'Pizza Sauce', 'Cheese', 'Pepperoni'],
+      toppings: ['Mushrooms', 'Onions', 'Sausages', 'Extra Cheese', 'Extra Pepperoni'],
+      sauces: ['Algerienne', 'Samourai', 'Andalouse', 'Mayonnaise', 'Ketchup'],
+      price: '18.00€',
+      //orderLink: 'https://example.com/pizza-order'
     },
     {
-        name: "Burger",
-        recipe: "Beef Patty, Lettuce, Tomato, Bun",
-        toppings: ["Cheese", "Bacon", "Pickles"],
-        sauce: ["Mayo", "Ketchup"],
-        price: 8,
-        vegan: false,
-        image: "https://example.com/images/burger.jpg"
+      category: 'Pizza',
+      type: 'Comfort',
+      name: 'Margherita Pizza',
+      image: 'images/pepperoni_pizza.jpg',
+      description: ['Pizza Crust', 'Pizza Sauce', 'Cheese'],
+      toppings: ['Mushrooms', 'Olives', 'Basil', 'Fresh Tomatoes'],
+      sauces: ['Garlic Sauce', 'Tomato Sauce', 'Pesto'],
+      price: '15.00€',
+      //orderLink: 'https://example.com/pizza-order'
     },
     {
-        name: "Caesar Salad",
-        recipe: "Romaine Lettuce, Croutons, Caesar Dressing, Parmesan Cheese",
-        toppings: ["Chicken", "Bacon"],
-        sauce: ["Caesar"],
-        price: 7,
-        vegan: false,
-        image: "https://example.com/images/caesar-salad.jpg"
+      category: 'Burger',
+      type: 'Vegan',
+      name: 'Veggie Burger',
+      image: 'images/veggie-burger.jpeg',
+      description: ['Burger Bun', 'Veggie Patty', 'Lettuce', 'Tomato', 'Onion'],
+      toppings: ['Cheese', 'Pickles', 'Ketchup', 'Mustard', 'Mayonnaise'],
+      sauces: ['BBQ Sauce', 'Samourai', 'Andalouse', 'Mayonnaise', 'Ketchup'],
+      price: '12.50€',
+      //orderLink: 'https://example.com/burger-order'
     },
     {
-        name: "Vegan Taco",
-        recipe: "Vegan Meat, Lettuce, Tomato, Taco Shell",
-        toppings: ["Vegan Cheese", "Salsa", "Guacamole"],
-        sauce: ["Salsa"],
-        price: 9,
-        vegan: true,
-        image: "https://example.com/images/vegan-taco.jpg"
+      category: 'Sushi',
+      type: 'Japanese',
+      name: 'California Roll Sushi',
+      image: 'images/california_roll_sushi.jpg',
+      description: ['Sushi Rice', 'Crab Stick', 'Cucumber', 'Avocado'],
+      toppings: ['Sesame Seeds', 'Fish Roe', 'Spicy Mayo'],
+      sauces: ['Soy Sauce', 'Wasabi', 'Ginger'],
+      price: '10.00€',
+      //orderLink: 'https://example.com/sushi-order'
     },
     {
-        name: "Spaghetti Bolognese",
-        recipe: "Spaghetti, Ground Beef, Tomato Sauce",
-        toppings: ["Parmesan"],
-        sauce: ["Tomato"],
-        price: 12,
-        vegan: false,
-        image: "https://example.com/images/spaghetti-bolognese.jpg"
+      category: 'Pasta',
+      type: 'Italian',
+      name: 'Spaghetti Carbonara',
+      image: 'images/spaghetti_carbonara.jpg',
+      description: ['Spaghetti', 'Bacon', 'Eggs', 'Parmesan Cheese'],
+      toppings: ['Black Pepper', 'Parsley'],
+      sauces: ['Carbonara Sauce'],
+      price: '14.50€',
+      //orderLink: 'https://example.com/pasta-order'
     },
     {
-        name: "Vegan Sushi Roll",
-        recipe: "Rice, Nori, Avocado, Cucumber",
-        toppings: ["Sesame Seeds"],
-        sauce: ["Soy Sauce"],
-        price: 10,
-        vegan: true,
-        image: "https://example.com/images/vegan-sushi-roll.jpg"
+      category: 'Salad',
+      type: 'Healthy',
+      name: 'Caesar Salad',
+      image: 'images/caesar_salad.jpg',
+      description: ['Lettuce', 'Tomatoes', 'Cucumbers', 'Red Onion', 'Feta Cheese'],
+      toppings: ['Olives', 'Bell Peppers'],
+      sauces: ['Olive Oil', 'Red Wine Vinegar'],
+      price: '8.00€',
+      //orderLink: 'https://example.com/salad-order'
     },
-    {
-        name: "Chicken Teriyaki",
-        recipe: "Chicken, Rice, Teriyaki Sauce",
-        toppings: ["Sesame Seeds", "Green Onion"],
-        sauce: ["Teriyaki"],
-        price: 11,
-        vegan: false,
-        image: "https://example.com/images/chicken-teriyaki.jpg"
-    },
-    {
-        name: "Vegan Quinoa Salad",
-        recipe: "Quinoa, Bell Peppers, Onion, Tomato",
-        toppings: ["Cucumber", "Feta Cheese"],
-        sauce: ["Olive Oil", "Lemon"],
-        price: 8,
-        vegan: true,
-        image: "https://example.com/images/vegan-quinoa-salad.jpg"
-    },
-    {
-        name: "Grilled Steak",
-        recipe: "Beef Steak, Grilled Vegetables",
-        toppings: ["Mushrooms", "Onions"],
-        sauce: ["Steak Sauce"],
-        price: 15,
-        vegan: false,
-        image: "https://example.com/images/grilled-steak.jpg"
-    },
-    {
-        name: "Vegan Stir Fry",
-        recipe: "Tofu, Mixed Vegetables, Soy Sauce",
-        toppings: ["Green Onion", "Sesame Seeds"],
-        sauce: ["Soy Sauce"],
-        price: 10,
-        vegan: true,
-        image: "https://example.com/images/vegan-stir-fry.jpg"
-    },
-    {
-        name: "Shrimp Scampi",
-        recipe: "Shrimp, Garlic, Butter, Linguine",
-        toppings: ["Parsley", "Lemon"],
-        sauce: ["Garlic Butter"],
-        price: 13,
-        vegan: false,
-        image: "https://example.com/images/shrimp-scampi.jpg"
-    },
-    {
-        name: "Vegan Burger",
-        recipe: "Vegan Patty, Lettuce, Tomato, Vegan Bun",
-        toppings: ["Vegan Cheese", "Pickles", "Onion"],
-        sauce: ["Ketchup", "Mustard"],
-        price: 9,
-        vegan: true,
-        image: "https://example.com/images/vegan-burger.jpg"
-    },
-    {
-        name: "Chicken Alfredo",
-        recipe: "Chicken, Fettuccine, Alfredo Sauce",
-        toppings: ["Parmesan"],
-        sauce: ["Alfredo"],
-        price: 11,
-        vegan: false,
-        image: "https://example.com/images/chicken-alfredo.jpg"
-    },
-    {
-        name: "Vegan Smoothie Bowl",
-        recipe: "Banana, Spinach, Almond Milk",
-        toppings: ["Chia Seeds", "Almonds", "Berries"],
-        sauce: ["Honey"],
-        price: 6,
-        vegan: true,
-        image: "https://example.com/images/vegan-smoothie-bowl.jpg"
-    },
-    {
-        name: "Fish and Chips",
-        recipe: "Battered Fish, Chips",
-        toppings: ["Lemon"],
-        sauce: ["Tartare"],
-        price: 10,
-        vegan: false,
-        image: "https://example.com/images/fish-and-chips.jpg"
+  ];
+
+  for (var i = 0; i < foodArray.length; i++) {
+    var foodItem = foodArray[i];
+
+    var foodCard = document.createElement('div');
+    foodCard.classList.add('food');
+
+    var category = document.createElement('p');
+    category.classList.add('category');
+    category.textContent = foodItem.category;
+
+    var type = document.createElement('p');
+    type.classList.add('type');
+    type.textContent = foodItem.type;
+
+    var name = document.createElement('h3');
+    name.textContent = foodItem.name;
+
+    var image = document.createElement('img');
+    image.src = foodItem.image;
+    image.alt = foodItem.name;
+
+    var description = document.createElement('div');
+    description.classList.add('description');
+    var ul = document.createElement('ul');
+    for (var j = 0; j < foodItem.description.length; j++) {
+      var li = document.createElement('li');
+      li.textContent = foodItem.description[j];
+      ul.appendChild(li);
     }
-];
+    description.appendChild(ul);
+
+    var toppings = document.createElement('div');
+    toppings.classList.add('toppings');
+    var toppingsLabel = document.createElement('label');
+    toppingsLabel.classList.add('toppings-label');
+    toppingsLabel.textContent = 'Toppings:'; 
+    toppings.appendChild(toppingsLabel)   
+    for (var k = 0; k < foodItem.toppings.length; k++) {
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = 'topping' + k; // Set a unique ID for each checkbox
+      checkbox.name = 'toppings';
+      checkbox.value = foodItem.toppings[k];
+
+      var label = document.createElement('label');
+      label.textContent = foodItem.toppings[k];
+      label.setAttribute('for', 'topping' + k);
+
+      toppings.appendChild(checkbox);
+      toppings.appendChild(label);
+    }
+
+
+
+    var sauces = document.createElement('div');
+    sauces.classList.add('sauces');
+    var saucesLabel = document.createElement('label');
+    saucesLabel.classList.add('sauces-label')
+    saucesLabel.textContent = 'Sauce:';
+    var saucesSelect = document.createElement('select');
+    for (var l = 0; l < foodItem.sauces.length; l++) {
+      var option = document.createElement('option');
+      option.textContent = foodItem.sauces[l];
+      saucesSelect.appendChild(option);
+    }
+
+    sauces.appendChild(saucesLabel);
+    sauces.appendChild(saucesSelect);
+
+    description.appendChild(toppings);
+    description.appendChild(sauces);
+
+    var orderLink = document.createElement('a');
+    orderLink.classList.add('ordernow')
+    // orderLink.href = foodItem.orderLink;
+    orderLink.textContent = 'Order Now - ' + foodItem.price;
+    foodCard.appendChild(category);
+    foodCard.appendChild(type);
+    foodCard.appendChild(name);
+    foodCard.appendChild(image);
+    foodCard.appendChild(description);
+
+    foodCard.appendChild(orderLink);
+
+    var foodContainer = document.getElementById('food-container');
+    foodContainer.appendChild(foodCard);
+  }
+}
+
+displayFoodCards();
+
+
+
+//WHAT LUCIE ADDED FOR THE BUTTONS TO WORK
+buttonOrderNowList = document.querySelectorAll(".ordernow")
+let nodesFoodItemsSelected = []
+
+//We will create an array with different objects (one for each selected items) that we will export in the other JS file.
+buttonOrderNowList.forEach(element => {
+    element.addEventListener("click", (event) => {
+      const thisFoodItemSelected = {};
+      let divFoodItemSelected = event.target.parentNode
+      console.log(divFoodItemSelected.children)
+      for (i=0; i < divFoodItemSelected.children.length ; i++) {
+        const selectedChild = divFoodItemSelected.children[i];
+        if (selectedChild.nodeName === "P") {
+          thisFoodItemSelected[selectedChild.classList[0]] = selectedChild.innerText
+        } else if (selectedChild.nodeName === "H3") {
+          thisFoodItemSelected.name = selectedChild.innerText
+        } else if (selectedChild.nodeName === "IMG") {
+          thisFoodItemSelected.img = selectedChild.src          
+        } else if (selectedChild.nodeName === "DIV") {
+          thisFoodItemSelected.information = selectedChild.children
+        } else if (selectedChild.nodeName === "A") {
+            tempPrice = parseInt(selectedChild.innerText.split(" - ")[1].toString().replace("€","")) // extract the price from the text
+          thisFoodItemSelected.price = tempPrice
+        }
+      }
+      nodesFoodItemsSelected.push(thisFoodItemSelected)
+      console.log(nodesFoodItemsSelected)
+      addNewItemCart()
+    })
+})
+
+//export { nodesFoodItemsSelected }
+   
+    
+    
+//______________________________________________________________________NAV BAR_________________________________________________________
     let shopICon = document.querySelector('.fa-cart-shopping');
     let shopDiv = document.querySelector('.shoppingCart');
 
@@ -253,6 +324,7 @@ const deleteArticle = (event) => {
         lastItemDiv = allCartItems[allCartItems.length-1]
         lastItemDiv.appendChild(emptyMessagePara)
     }
+    adjustNumberofItems()
     totalPrice()
 }
 
@@ -307,10 +379,10 @@ const adjustPrice = () => {
 
 //_______________________________calculate the total price
 const totalPrice = () => {
-    allCartItems = document.querySelectorAll(".cartItem")
+    adjustPrice()
     finaltotal = document.querySelector(".finalTotalValue")
     deliveryFees = document.querySelector(".deliveryFeesText")
-    if (allCartItems.length > 0) { // puts 0 as a total if there are no items in the list
+    if (parseInt(subtotalPrice) > 0) { // puts 0 as a total if there are no items in the list
         adjustPrice()
         finaltotal.innerText = parseInt(subtotalPrice) + parseInt(deliveryFees.innerText)
     } else {
@@ -318,7 +390,6 @@ const totalPrice = () => {
         finaltotal.innerText = "0"
     }
 }
-
 
  
 //_______________________________CREATE A NEW ARTICLE
@@ -337,7 +408,8 @@ const generateNewArticleCart = () => {
     //item picture
     itemImage = document.createElement("img")
     itemImage.classList.add("itemImage")
-    itemImage.setAttribute("src", "")
+    itemImage.setAttribute("src", `${nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].img}`)
+    itemImage.style.height = ("80px")
     itemImage.setAttribute("alt", " ")
 
     //div item elements
@@ -347,12 +419,13 @@ const generateNewArticleCart = () => {
     //h4 item name
     itemName = document.createElement("h4")
     itemName.classList.add("itemName")
-    itemNameText = document.createTextNode("Item Name")
+    itemNameText = document.createTextNode(`${nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].name}`)
 
     //p item information
     itemInformation = document.createElement("p")
     itemInformation.classList.add("itemInformation")
-    itemInformationText = document.createTextNode("Item Information")
+    itemInformationText = document.createTextNode(`${nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].information[1].innerHTML}`)
+    //This gives me the topping div : nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].information[1] 
 
     //p item price 
     itemPrice = document.createElement("p")
@@ -362,7 +435,7 @@ const generateNewArticleCart = () => {
     itemPriceCurrencyText = document.createTextNode("€")
     itemPriceValue = document.createElement("span")
     itemPriceValue.classList.add("itemPriceValue")
-    itemPriceValueText = document.createTextNode("15")
+    itemPriceValueText = document.createTextNode(`${nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].price}`)
 
     //div item quantity
     itemQuantity = document.createElement("div")
@@ -389,7 +462,7 @@ const generateNewArticleCart = () => {
     //p current quantity
     currentQuantity = document.createElement("p")
     currentQuantity.classList.add("currentQuantity")
-    currentQuantityValue = document.createTextNode("1")
+    currentQuantityValue = document.createTextNode("1") //SEE HOW TO CREATE A TEXT NODE THAT IS DIRECTLY AN INTEGER
 
     //button delete article
     removeArticle = document.createElement("button")
@@ -443,23 +516,25 @@ const generateNewArticleCart = () => {
 //Add a new item
 const addNewItemCart = () => {
     generateNewArticleCart()
+    adjustNumberofItems()
     totalPrice()
 }
 
-addNewItemCart()
+adjustNumberofItems()
+//addNewItemCart()
+
+
+//_________________________________________GET INFO FROM MENU
+
+buttonOrderNowList = document.querySelectorAll(".ordernow")
+
+buttonOrderNowList.forEach(element => {
+    addEventListener("click", )
+});
 
 
 
-//let list = []
-//let innerText = []
 
 
-
-numberItemsValue = document.querySelector(".numberItemsValue") //I put the assignation here so it's reset each time we use the function
-
-
-
-
-
-//delete the item function: if it goes lower than 0, we should remove it
-//also mayby add a remove icon
+//the last element of the array (the newest added to the list) is :
+//nodesFoodItemsSelected[nodesFoodItemsSelected.length-1]
