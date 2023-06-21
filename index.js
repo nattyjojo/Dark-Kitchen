@@ -535,13 +535,11 @@ adjustNumberofItems()
 
 buttonOrderNowList = document.querySelectorAll(".ordernow")
 
-buttonOrderNowList.forEach(element => {
-    addEventListener("click", )
-});
 
 
+numberItemsValue = document.querySelector(".numberItemsValue") //I put the assignation here so it's reset each time we use the function
 
 
+//delete the item function: if it goes lower than 0, we should remove it
+//also mayby add a remove icon
 
-//the last element of the array (the newest added to the list) is :
-//nodesFoodItemsSelected[nodesFoodItemsSelected.length-1]
