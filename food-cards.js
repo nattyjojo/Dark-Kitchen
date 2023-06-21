@@ -1,11 +1,3 @@
-document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-
-function toggleTheme() {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
-    document.getElementById('theme-toggle').classList.toggle('dark');
-}
-
 function displayFoodCards() {
   var foodArray = [
     {
@@ -110,19 +102,30 @@ function displayFoodCards() {
     var toppings = document.createElement('div');
     toppings.classList.add('toppings');
     var toppingsLabel = document.createElement('label');
-    toppingsLabel.textContent = 'Toppings:';
-    var toppingsSelect = document.createElement('select');
+    toppingsLabel.classList.add('toppings-label');
+    toppingsLabel.textContent = 'Toppings:'; 
+    toppings.appendChild(toppingsLabel)   
     for (var k = 0; k < foodItem.toppings.length; k++) {
-      var option = document.createElement('option');
-      option.textContent = foodItem.toppings[k];
-      toppingsSelect.appendChild(option);
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = 'topping' + k; // Set a unique ID for each checkbox
+      checkbox.name = 'toppings';
+      checkbox.value = foodItem.toppings[k];
+
+      var label = document.createElement('label');
+      label.textContent = foodItem.toppings[k];
+      label.setAttribute('for', 'topping' + k);
+
+      toppings.appendChild(checkbox);
+      toppings.appendChild(label);
     }
-    toppings.appendChild(toppingsLabel);
-    toppings.appendChild(toppingsSelect);
+
+
 
     var sauces = document.createElement('div');
     sauces.classList.add('sauces');
     var saucesLabel = document.createElement('label');
+    saucesLabel.classList.add('sauces-label')
     saucesLabel.textContent = 'Sauce:';
     var saucesSelect = document.createElement('select');
     for (var l = 0; l < foodItem.sauces.length; l++) {
@@ -133,6 +136,7 @@ function displayFoodCards() {
 
     sauces.appendChild(saucesLabel);
     sauces.appendChild(saucesSelect);
+
     description.appendChild(toppings);
     description.appendChild(sauces);
 

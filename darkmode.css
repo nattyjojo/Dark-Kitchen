@@ -1,0 +1,51 @@
+body.dark .container{
+background-color: black;
+color: #fff;
+}
+body.dark .container i{
+color: #fff;
+background-color: black;
+}
+.dark i.fa-moon {
+cursor: pointer;
+}
+
+/* body.dark .nav-bar{
+    background: blue;
+} */
+
+body.dark .nav-icons i{
+    /* color: fff; */
+    /* background-color: black; */
+    /* border: none; */
+}
+
+body.dark hr{
+    opacity: 0;
+
+}
+
+body.dark .food-cards{
+background-color: black;
+color: #fff;
+}
+
+body.dark .food-cards select{
+color: white;
+background-color: black;
+}
+
+body.dark .food{
+    background-color: black;
+    color: #fff;
+    padding: 8px 20px;
+    width: 350px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 3);
+    height: 600px;
+}
+
+
