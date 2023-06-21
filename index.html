@@ -8,8 +8,9 @@
     <script src="https://kit.fontawesome.com/0feefb6da9.js" crossorigin="anonymous"></script>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="food-cards.css">
+    <link rel="stylesheet" href="darkmode.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +59,10 @@
                     <div class="cartButton">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
+
+                    <div class="darkmode">
+                        <i class="fa-sharp fa-solid fa-moon" id="moon-icon"></i>
+                      </div>
                     <section class="shoppingCart"> <!--Shopping cart - Lucie-->
     <div class="cartUpperPart">
         <div class="cartHeader">
@@ -112,6 +117,7 @@
 
     </div>
 
+
 </section>
 
                     </div>
@@ -130,47 +136,19 @@
         </section>
     <section class="slide">
         <figure class="slide__content all">
-            <img class="icons" src="./slidIcons/plate.jpg" alt="all">
+            <img class="icons" src="./slidicons/plate.jpg" alt="all">
             <figcaption class="slide__content--title">All</figcaption>
         </figure>
         <figure class="slide__content">
-            <img class="icons" src="./slidIcons/pizza.png" alt="pizza icon">
-            <figcaption class="slide__content--title">Pizza</figcaption>
-        </figure>
-        <figure class="slide__content">
-            <img class="icons" src="./slidIcons/sushi.png" alt="sushi icon">
-            <figcaption class="slide__content--title">Sushi</figcaption>
-        </figure>
-        <figure class="slide__content">
-            <img class="icons" src="./slidIcons/drinks.png" alt="drinks icon">
-            <figcaption class="slide__content--title">Drinks</figcaption>
-        </figure>
-        <figure class="slide__content">
-            <img class="icons" src="./slidIcons/cake.png" alt="cake icon">
-            <figcaption class="slide__content--title">Cake</figcaption>
-        </figure>
-        <figure class="slide__content">
-            <img class="icons" src="./slidIcons/sushi2.png" alt="another sushi icon">
-            <figcaption class="slide__content--title">Sushi</figcaption>
-        </figure>
-        <figure class="slide__content">
-            <img class="icons" src="./slidIcons/bread.png" alt="bread icon">
+
             <figcaption class="slide__content--title">Bread</figcaption>
         </figure>
         <figure class="slide__content">
-            <img class="icons" src="./slidIcons/yogurt.png" alt="Yogurt icon">
+            <img class="icons" src="./slidicons/yogurt.png" alt="Yogurt icon">
             <figcaption class="slide__content--title">Yogurt</figcaption>
         </figure>
         <figure class="slide__content">
-            <img class="icons" src="./slidIcons/burger.png" alt="Burger icon">
-            <figcaption class="slide__content--title">Burger</figcaption>
-        </figure>
-        <figure class="slide__content">
-            <img class="icons" src="./slidIcons/bowl.png" alt="Bowl icon">
-            <figcaption class="slide__content--title">Bowl</figcaption>
-        </figure>
-        <figure class="slide__content">
-            <img class="icons" src="./slidIcons/meat.png" alt="meat icon">
+
             <figcaption class="slide__content--title">Meat</figcaption>
         </figure>
         <i class="slide__content btnRight fa-solid fa-angle-right"></i>
@@ -181,17 +159,18 @@
 
     </section>
 
-              
+</section>
 
+                    </div>
+                </div>
+                <hr>
+        </header>
     
-             <section class="food-cards" id = "food-container">
-
-        </section>
 
 </div>
-<script defer src="./index.js"></script>
     
 <script src="index.js"></script>
 <script src="food-cards.js"></script>
+<script src="darkmode.js"></script>
 </body>
 </html>
