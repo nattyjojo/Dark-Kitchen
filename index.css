@@ -299,8 +299,7 @@ main{
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
-    padding: 20px;
-
+    padding: 60px 40px 0px 40px;
 }
 
 .nav__header{
@@ -312,44 +311,54 @@ main{
     padding-left: 12px;
     font-weight: bold;
     color: rgb(57, 57, 57);
+    margin-top: 6px;
 }
 .fa-cart-shopping{
 	    padding-right: 20px;
 }
 .findIcon{
-    width: 30px;
-    height: 25px;
+    width: 40px;
+    height: 30px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .nav__btn{
     display: flex;
-    font-size: 12px;
-    justify-content: center;
+    font-size: 14px;
     color: rgb(152, 149, 149);
+    margin-top: 5px;
+    margin-right: 20px;
+
 }
 .nav__header--added {
     margin-right: 20px;
 }
 .btnDown{
+    padding: 0;
+    margin: 0;
     margin-left: 5px;
+    font-size: 12px;
+
 }
 
 /* slide section */
 
 .slide{
-        margin-top: 50px;
+     margin-top: 50px;
     position: relative;
     width: 129%;
     padding: 13px 30px;
+    padding: 0px 20px;
+    margin: 50px 20px;
 }
 
 .slide__content{
     display: inline-block;
-    max-width: 65%;
+    max-width: 70%;
     height: 100px;
     margin: 0;
-    margin-right: 4.4%;
+    margin-right: 3.7%;
 }
 .slide__content :hover{
     opacity: 2%;
@@ -357,7 +366,6 @@ main{
 .icons{
     height: 50px;
     width: 50px;
-    border: 1px solid rgb(223, 218, 218);
     border-radius: 50%;
     margin-bottom: 10px;
 
@@ -367,13 +375,8 @@ main{
     
 }
 .btnRight{
-    margin-right: 0;
-    top: 30px;
     color: rgb(152, 149, 149);
-    position: absolute;
-    top: 40px;
 }
-
 
 .all{
     display: inline-block;
