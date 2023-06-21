@@ -181,17 +181,24 @@ buttonOrderNowList.forEach(element => {
       let divFoodItemSelected = event.target.parentNode
       console.log(divFoodItemSelected.children)
       for (i=0; i < divFoodItemSelected.children.length ; i++) {
-        const selectedChild = divFoodItemSelected.children[i];
-        if (selectedChild.nodeName === "P") {
-          thisFoodItemSelected[selectedChild.classList[0]] = selectedChild.innerText
-        } else if (selectedChild.nodeName === "H3") {
-          thisFoodItemSelected.name = selectedChild.innerText
-        } else if (selectedChild.nodeName === "IMG") {
-          thisFoodItemSelected.img = selectedChild.src          
-        } else if (selectedChild.nodeName === "DIV") {
-          thisFoodItemSelected.information = selectedChild.children
-        } else if (selectedChild.nodeName === "A") {
-            tempPrice = parseInt(selectedChild.innerText.split(" - ")[1].toString().replace("€","")) // extract the price from the text
+        if (divFoodItemSelected.children[i].nodeName === "P") {
+          thisFoodItemSelected[divFoodItemSelected.children[i].classList[0]] = divFoodItemSelected.children[i].innerText
+        } else if (divFoodItemSelected.children[i].nodeName === "H3") {
+          thisFoodItemSelected.name = divFoodItemSelected.children[i].innerText
+        } else if (divFoodItemSelected.children[i].nodeName === "IMG") {
+          thisFoodItemSelected.img = divFoodItemSelected.children[i].src          
+        // } else if (divFoodItemSelected.children[i].nodeName === "DIV") {
+        //     //topping information
+        //     selectedFoodToppings = divFoodItemSelected.children[i].children[1]
+        //     selectedFoodToppingsList = selectedFoodToppings.querySelectorAll('input[type="checkbox"]:checked') // this gives me a nodelist of all the toppings that were selected
+        //     let selectedFoodToppingsChecked = []
+        //     for (i=0 ; i < selectedFoodToppingsList.length-1 ; i++)
+        //         toppingName = selectedFoodToppingsList[i].getAttribute("value")
+        //         selectedFoodToppingsChecked.push(toppingName)
+
+        //   thisFoodItemSelected.informationTopping = selectedFoodToppingsChecked
+        } else if (divFoodItemSelected.children[i].nodeName === "A") {
+            tempPrice = parseInt(divFoodItemSelected.children[i].innerText.split(" - ")[1].toString().replace("€","")) // extract the price from the text
           thisFoodItemSelected.price = tempPrice
         }
       }
@@ -425,7 +432,7 @@ const generateNewArticleCart = () => {
     itemInformation = document.createElement("p")
     itemInformation.classList.add("itemInformation")
     itemInformationText = document.createTextNode(`${nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].information[1].innerHTML}`)
-    //This gives me the topping div : nodesFoodItemsSelected[nodesFoodItemsSelected.length-1].information[1] 
+    //This gives me the topping div : ;
 
     //p item price 
     itemPrice = document.createElement("p")
